@@ -1,0 +1,24 @@
+# The setup for a representation of a car. #
+
+final car = {
+    fuel: 100,
+}
+
+fn drive(distance) {
+    if distance < 0 {
+        print("Error: Cannot drive negative distance")
+        return
+    } elif car.fuel < distance {
+        print("Error: Car cannot drive that far")
+        return
+    }
+
+    car.fuel -= distance
+}
+
+fn refuel() {
+    car.fuel = 100
+}
+
+car.drive = drive
+car["refuel"] = refuel

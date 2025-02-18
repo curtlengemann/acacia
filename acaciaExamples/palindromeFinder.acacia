@@ -1,0 +1,21 @@
+# Program to find if a string is a palindrome. A couple cases are tested. #
+
+fn isPalindrome(word) {
+    i = 0
+    final length = len(word)
+
+    for i < (length/2) {
+        if charAt(word, i) != charAt(word, length - i - 1) {
+            return false
+        }
+        i++
+    }
+
+    true
+}
+
+# Should print true #
+print(isPalindrome("racecar"))
+
+# Should print false #
+print(isPalindrome("apple"))
